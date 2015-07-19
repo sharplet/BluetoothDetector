@@ -7,20 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CE170DF61B588199002AFF33 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CE170DF51B588199002AFF33 /* main.m */; };
-		CE170DF91B588199002AFF33 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE170DF81B588199002AFF33 /* AppDelegate.m */; };
-		CE170DFC1B588199002AFF33 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE170DFB1B588199002AFF33 /* ViewController.m */; };
 		CE170DFF1B588199002AFF33 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE170DFD1B588199002AFF33 /* Main.storyboard */; };
 		CE170E011B588199002AFF33 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE170E001B588199002AFF33 /* Images.xcassets */; };
 		CE170E041B588199002AFF33 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE170E021B588199002AFF33 /* LaunchScreen.xib */; };
 		CE170E101B588199002AFF33 /* BluetoothDetectorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE170E0F1B588199002AFF33 /* BluetoothDetectorTests.m */; };
-		CE170E1B1B58824A002AFF33 /* BluetoothDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = CE170E1A1B58824A002AFF33 /* BluetoothDetector.m */; };
 		CE170E261B588962002AFF33 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE170E1D1B5883CE002AFF33 /* ReactiveCocoa.framework */; };
 		CE170E271B588962002AFF33 /* ReactiveCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE170E1D1B5883CE002AFF33 /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CE170E281B588962002AFF33 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE170E1E1B5883CE002AFF33 /* Result.framework */; };
 		CE170E291B588962002AFF33 /* Result.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE170E1E1B5883CE002AFF33 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CE170E2A1B588962002AFF33 /* Box.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE170E1F1B5883CE002AFF33 /* Box.framework */; };
 		CE170E2B1B588962002AFF33 /* Box.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE170E1F1B5883CE002AFF33 /* Box.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CE170E6A1B5B5FD9002AFF33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE170E691B5B5FD9002AFF33 /* AppDelegate.swift */; };
+		CE170E6C1B5B6014002AFF33 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE170E6B1B5B6014002AFF33 /* ViewController.swift */; };
+		CE170E6E1B5B603D002AFF33 /* BluetoothDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE170E6D1B5B603D002AFF33 /* BluetoothDetector.swift */; };
+		CE170E781B5BB27E002AFF33 /* ReactiveCocoa.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = CE170E741B5BB272002AFF33 /* ReactiveCocoa.framework.dSYM */; };
+		CE170E791B5BB27E002AFF33 /* Result.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = CE170E751B5BB272002AFF33 /* Result.framework.dSYM */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,27 +48,36 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CE170E6F1B5BB22F002AFF33 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 16;
+			files = (
+				CE170E781B5BB27E002AFF33 /* ReactiveCocoa.framework.dSYM in CopyFiles */,
+				CE170E791B5BB27E002AFF33 /* Result.framework.dSYM in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		CE170DF01B588199002AFF33 /* BluetoothDetector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BluetoothDetector.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE170DF41B588199002AFF33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CE170DF51B588199002AFF33 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		CE170DF71B588199002AFF33 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		CE170DF81B588199002AFF33 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		CE170DFA1B588199002AFF33 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		CE170DFB1B588199002AFF33 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		CE170DFE1B588199002AFF33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE170E001B588199002AFF33 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CE170E031B588199002AFF33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		CE170E091B588199002AFF33 /* BluetoothDetectorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BluetoothDetectorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE170E0E1B588199002AFF33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE170E0F1B588199002AFF33 /* BluetoothDetectorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BluetoothDetectorTests.m; sourceTree = "<group>"; };
-		CE170E191B58824A002AFF33 /* BluetoothDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BluetoothDetector.h; sourceTree = "<group>"; };
-		CE170E1A1B58824A002AFF33 /* BluetoothDetector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BluetoothDetector.m; sourceTree = "<group>"; };
 		CE170E1D1B5883CE002AFF33 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = "<group>"; };
 		CE170E1E1B5883CE002AFF33 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 		CE170E1F1B5883CE002AFF33 /* Box.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Box.framework; path = Carthage/Build/iOS/Box.framework; sourceTree = "<group>"; };
+		CE170E691B5B5FD9002AFF33 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CE170E6B1B5B6014002AFF33 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CE170E6D1B5B603D002AFF33 /* BluetoothDetector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothDetector.swift; sourceTree = "<group>"; };
+		CE170E741B5BB272002AFF33 /* ReactiveCocoa.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = ReactiveCocoa.framework.dSYM; path = Carthage/Build/iOS/ReactiveCocoa.framework.dSYM; sourceTree = "<group>"; };
+		CE170E751B5BB272002AFF33 /* Result.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Result.framework.dSYM; path = Carthage/Build/iOS/Result.framework.dSYM; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,16 +123,13 @@
 		CE170DF21B588199002AFF33 /* BluetoothDetector */ = {
 			isa = PBXGroup;
 			children = (
-				CE170DF71B588199002AFF33 /* AppDelegate.h */,
-				CE170DF81B588199002AFF33 /* AppDelegate.m */,
-				CE170E191B58824A002AFF33 /* BluetoothDetector.h */,
-				CE170E1A1B58824A002AFF33 /* BluetoothDetector.m */,
+				CE170E691B5B5FD9002AFF33 /* AppDelegate.swift */,
+				CE170E6D1B5B603D002AFF33 /* BluetoothDetector.swift */,
+				CE170E6B1B5B6014002AFF33 /* ViewController.swift */,
 				CE170E001B588199002AFF33 /* Images.xcassets */,
 				CE170E021B588199002AFF33 /* LaunchScreen.xib */,
 				CE170DFD1B588199002AFF33 /* Main.storyboard */,
 				CE170DF31B588199002AFF33 /* Supporting Files */,
-				CE170DFA1B588199002AFF33 /* ViewController.h */,
-				CE170DFB1B588199002AFF33 /* ViewController.m */,
 			);
 			path = BluetoothDetector;
 			sourceTree = "<group>";
@@ -131,7 +138,6 @@
 			isa = PBXGroup;
 			children = (
 				CE170DF41B588199002AFF33 /* Info.plist */,
-				CE170DF51B588199002AFF33 /* main.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -156,6 +162,8 @@
 		CE170E1C1B58839C002AFF33 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CE170E741B5BB272002AFF33 /* ReactiveCocoa.framework.dSYM */,
+				CE170E751B5BB272002AFF33 /* Result.framework.dSYM */,
 				CE170E1D1B5883CE002AFF33 /* ReactiveCocoa.framework */,
 				CE170E1E1B5883CE002AFF33 /* Result.framework */,
 				CE170E1F1B5883CE002AFF33 /* Box.framework */,
@@ -174,6 +182,7 @@
 				CE170DED1B588199002AFF33 /* Frameworks */,
 				CE170DEE1B588199002AFF33 /* Resources */,
 				CE170E2C1B588962002AFF33 /* Embed Frameworks */,
+				CE170E6F1B5BB22F002AFF33 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -264,10 +273,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE170DFC1B588199002AFF33 /* ViewController.m in Sources */,
-				CE170DF91B588199002AFF33 /* AppDelegate.m in Sources */,
-				CE170E1B1B58824A002AFF33 /* BluetoothDetector.m in Sources */,
-				CE170DF61B588199002AFF33 /* main.m in Sources */,
+				CE170E6A1B5B5FD9002AFF33 /* AppDelegate.swift in Sources */,
+				CE170E6C1B5B6014002AFF33 /* ViewController.swift in Sources */,
+				CE170E6E1B5B603D002AFF33 /* BluetoothDetector.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,6 +401,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -401,6 +410,7 @@
 				INFOPLIST_FILE = BluetoothDetector/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -408,6 +418,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -472,6 +483,7 @@
 				CE170E151B588199002AFF33 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CE170E161B588199002AFF33 /* Build configuration list for PBXNativeTarget "BluetoothDetectorTests" */ = {
 			isa = XCConfigurationList;
@@ -480,6 +492,7 @@
 				CE170E181B588199002AFF33 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
