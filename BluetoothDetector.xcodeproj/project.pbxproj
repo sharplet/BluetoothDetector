@@ -14,6 +14,7 @@
 		CE170E011B588199002AFF33 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE170E001B588199002AFF33 /* Images.xcassets */; };
 		CE170E041B588199002AFF33 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE170E021B588199002AFF33 /* LaunchScreen.xib */; };
 		CE170E101B588199002AFF33 /* BluetoothDetectorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE170E0F1B588199002AFF33 /* BluetoothDetectorTests.m */; };
+		CE170E1B1B58824A002AFF33 /* BluetoothDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = CE170E1A1B58824A002AFF33 /* BluetoothDetector.m */; };
 		CE170E261B588962002AFF33 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE170E1D1B5883CE002AFF33 /* ReactiveCocoa.framework */; };
 		CE170E271B588962002AFF33 /* ReactiveCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE170E1D1B5883CE002AFF33 /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CE170E281B588962002AFF33 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE170E1E1B5883CE002AFF33 /* Result.framework */; };
@@ -62,6 +63,8 @@
 		CE170E091B588199002AFF33 /* BluetoothDetectorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BluetoothDetectorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE170E0E1B588199002AFF33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE170E0F1B588199002AFF33 /* BluetoothDetectorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BluetoothDetectorTests.m; sourceTree = "<group>"; };
+		CE170E191B58824A002AFF33 /* BluetoothDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BluetoothDetector.h; sourceTree = "<group>"; };
+		CE170E1A1B58824A002AFF33 /* BluetoothDetector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BluetoothDetector.m; sourceTree = "<group>"; };
 		CE170E1D1B5883CE002AFF33 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = "<group>"; };
 		CE170E1E1B5883CE002AFF33 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 		CE170E1F1B5883CE002AFF33 /* Box.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Box.framework; path = Carthage/Build/iOS/Box.framework; sourceTree = "<group>"; };
@@ -112,12 +115,14 @@
 			children = (
 				CE170DF71B588199002AFF33 /* AppDelegate.h */,
 				CE170DF81B588199002AFF33 /* AppDelegate.m */,
-				CE170DFA1B588199002AFF33 /* ViewController.h */,
-				CE170DFB1B588199002AFF33 /* ViewController.m */,
-				CE170DFD1B588199002AFF33 /* Main.storyboard */,
+				CE170E191B58824A002AFF33 /* BluetoothDetector.h */,
+				CE170E1A1B58824A002AFF33 /* BluetoothDetector.m */,
 				CE170E001B588199002AFF33 /* Images.xcassets */,
 				CE170E021B588199002AFF33 /* LaunchScreen.xib */,
+				CE170DFD1B588199002AFF33 /* Main.storyboard */,
 				CE170DF31B588199002AFF33 /* Supporting Files */,
+				CE170DFA1B588199002AFF33 /* ViewController.h */,
+				CE170DFB1B588199002AFF33 /* ViewController.m */,
 			);
 			path = BluetoothDetector;
 			sourceTree = "<group>";
@@ -261,6 +266,7 @@
 			files = (
 				CE170DFC1B588199002AFF33 /* ViewController.m in Sources */,
 				CE170DF91B588199002AFF33 /* AppDelegate.m in Sources */,
+				CE170E1B1B58824A002AFF33 /* BluetoothDetector.m in Sources */,
 				CE170DF61B588199002AFF33 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
