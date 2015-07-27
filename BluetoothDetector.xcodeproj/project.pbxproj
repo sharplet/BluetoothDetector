@@ -15,8 +15,6 @@
 		CE170E271B588962002AFF33 /* ReactiveCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE170E1D1B5883CE002AFF33 /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CE170E281B588962002AFF33 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE170E1E1B5883CE002AFF33 /* Result.framework */; };
 		CE170E291B588962002AFF33 /* Result.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE170E1E1B5883CE002AFF33 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		CE170E2A1B588962002AFF33 /* Box.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE170E1F1B5883CE002AFF33 /* Box.framework */; };
-		CE170E2B1B588962002AFF33 /* Box.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE170E1F1B5883CE002AFF33 /* Box.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CE170E6A1B5B5FD9002AFF33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE170E691B5B5FD9002AFF33 /* AppDelegate.swift */; };
 		CE170E6C1B5B6014002AFF33 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE170E6B1B5B6014002AFF33 /* ViewController.swift */; };
 		CE170E6E1B5B603D002AFF33 /* BluetoothDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE170E6D1B5B603D002AFF33 /* BluetoothDetector.swift */; };
@@ -42,7 +40,6 @@
 			dstSubfolderSpec = 10;
 			files = (
 				CE170E271B588962002AFF33 /* ReactiveCocoa.framework in Embed Frameworks */,
-				CE170E2B1B588962002AFF33 /* Box.framework in Embed Frameworks */,
 				CE170E291B588962002AFF33 /* Result.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -72,7 +69,6 @@
 		CE170E0F1B588199002AFF33 /* BluetoothDetectorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BluetoothDetectorTests.m; sourceTree = "<group>"; };
 		CE170E1D1B5883CE002AFF33 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = "<group>"; };
 		CE170E1E1B5883CE002AFF33 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
-		CE170E1F1B5883CE002AFF33 /* Box.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Box.framework; path = Carthage/Build/iOS/Box.framework; sourceTree = "<group>"; };
 		CE170E691B5B5FD9002AFF33 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE170E6B1B5B6014002AFF33 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CE170E6D1B5B603D002AFF33 /* BluetoothDetector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothDetector.swift; sourceTree = "<group>"; };
@@ -86,7 +82,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE170E261B588962002AFF33 /* ReactiveCocoa.framework in Frameworks */,
-				CE170E2A1B588962002AFF33 /* Box.framework in Frameworks */,
 				CE170E281B588962002AFF33 /* Result.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -166,7 +161,6 @@
 				CE170E751B5BB272002AFF33 /* Result.framework.dSYM */,
 				CE170E1D1B5883CE002AFF33 /* ReactiveCocoa.framework */,
 				CE170E1E1B5883CE002AFF33 /* Result.framework */,
-				CE170E1F1B5883CE002AFF33 /* Box.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -217,6 +211,8 @@
 		CE170DE81B588199002AFF33 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = Outware;
 				TargetAttributes = {

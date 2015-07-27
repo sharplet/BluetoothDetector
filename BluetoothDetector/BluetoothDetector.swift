@@ -6,7 +6,7 @@ import ReactiveCocoa
 
 // MARK: - Error type
 
-public enum BluetoothError: Int, Printable, ErrorType {
+public enum BluetoothError: Int, CustomStringConvertible, ErrorType {
   case Unsupported
   case Unauthorized
 
@@ -32,8 +32,8 @@ public func bluetoothPoweredOn() -> SignalProducer<Bool, BluetoothError> {
   let delegate = BluetoothDelegate()
 
   let poweredOn = delegate.stateProducer
-    |> promoteErrors(BluetoothError.self)
-    |> flatMap(.Concat) { state -> SignalProducer<Bool, BluetoothError> in
+    .promoteErrors(BluetoothError.self)
+    .flatMap(.Concat) { state -> SignalProducer<Bool, BluetoothError> in
       switch state {
       case .Unsupported:
         return SignalProducer(error: .Unsupported)
@@ -60,7 +60,7 @@ private final class BluetoothDelegate: NSObject, CBCentralManagerDelegate {
   private let (stateProducer, stateSink) = SignalProducer<CBCentralManagerState, NoError>.buffer(1)
 
   @objc
-  func centralManagerDidUpdateState(central: CBCentralManager!) {
+  func centralManagerDidUpdateState(central: CBCentralManager) {
     sendNext(stateSink, central.state)
   }
 }

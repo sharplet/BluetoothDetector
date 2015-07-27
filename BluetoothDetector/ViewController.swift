@@ -12,13 +12,13 @@ class ViewController: UIViewController {
 
   var bluetoothStatus: SignalProducer<AnyObject?, NoError> {
     return bluetoothPoweredOn()
-      |> map {
+      .map {
         return "Bluetooth " + ($0 ? "Powered On" : "Powered Off")
       }
-      |> catch { error in
+      .flatMapError { error in
         return SignalProducer(value: "<error: \(error.description)>")
       }
-      |> observeOn(UIScheduler())
+      .observeOn(UIScheduler())
   }
 
   override func viewDidLoad() {
