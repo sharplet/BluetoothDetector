@@ -247,7 +247,7 @@ class PropertySpec: QuickSpec {
 				}
 				
 				it("should tear down the binding when the property deallocates") {
-					let (signal, observer) = Signal<String, NoError>.pipe()
+					let (signal, _) = Signal<String, NoError>.pipe()
 
 					var mutableProperty: MutableProperty<String>? = MutableProperty(initialPropertyValue)
 
@@ -282,7 +282,6 @@ class PropertySpec: QuickSpec {
 				}
 
 				it("should tear down the binding when bound signal is completed") {
-					let signalValues = [initialPropertyValue, subsequentPropertyValue]
 					let (signalProducer, observer) = SignalProducer<String, NoError>.buffer(1)
 					
 					let mutableProperty = MutableProperty(initialPropertyValue)

@@ -45,8 +45,8 @@ extension QueueScheduler {
 	}
 }
 
-private func defaultNSError(message: String, #file: String, #line: Int) -> NSError {
-	return Result<(), NSError>.error(message: message, file: file, line: line)
+private func defaultNSError(message: String, file: String, line: Int) -> NSError {
+	return Result<(), NSError>.error(message, file: file, line: line)
 }
 
 extension RACSignal {
@@ -71,9 +71,11 @@ extension RACSignal {
 	}
 }
 
-/// Turns each value into an Optional.
-private func optionalize<T, E>(signal: Signal<T, E>) -> Signal<T?, E> {
-	return signal |> map { Optional($0) }
+private extension SignalType {
+	/// Turns each value into an Optional.
+	private func optionalize() -> Signal<T?, E> {
+		return signal.map { Optional($0) }
+	}
 }
 
 /// Creates a RACSignal that will start() the producer once for each
@@ -81,7 +83,7 @@ private func optionalize<T, E>(signal: Signal<T, E>) -> Signal<T?, E> {
 ///
 /// Any `Interrupted` events will be silently discarded.
 public func toRACSignal<T: AnyObject, E>(producer: SignalProducer<T, E>) -> RACSignal {
-	return toRACSignal(producer |> optionalize)
+	return toRACSignal(producer.lift { $0.optionalize() })
 }
 
 /// Creates a RACSignal that will start() the producer once for each
@@ -93,7 +95,7 @@ public func toRACSignal<T: AnyObject, E>(producer: SignalProducer<T?, E>) -> RAC
 		let selfDisposable = producer.start(next: { value in
 			subscriber.sendNext(value)
 		}, error: { error in
-			subscriber.sendError(error.nsError)
+			subscriber.sendError(error as NSError)
 		}, completed: {
 			subscriber.sendCompleted()
 		})
@@ -108,7 +110,7 @@ public func toRACSignal<T: AnyObject, E>(producer: SignalProducer<T?, E>) -> RAC
 ///
 /// Any `Interrupted` event will be silently discarded.
 public func toRACSignal<T: AnyObject, E>(signal: Signal<T, E>) -> RACSignal {
-	return toRACSignal(signal |> optionalize)
+	return toRACSignal(signal.optionalize())
 }
 
 /// Creates a RACSignal that will observe the given signal.
@@ -119,7 +121,7 @@ public func toRACSignal<T: AnyObject, E>(signal: Signal<T?, E>) -> RACSignal {
 		let selfDisposable = signal.observe(next: { value in
 			subscriber.sendNext(value)
 		}, error: { error in
-			subscriber.sendError(error.nsError)
+			subscriber.sendError(error as NSError)
 		}, completed: {
 			subscriber.sendCompleted()
 		})
@@ -140,22 +142,22 @@ extension RACCommand {
 		let enabledProperty = MutableProperty(true)
 
 		enabledProperty <~ self.enabled.toSignalProducer()
-			|> map { $0 as! Bool }
-			|> catch { _ in SignalProducer<Bool, NoError>(value: false) }
+			.map { $0 as! Bool }
+			.flatMapError { _ in SignalProducer<Bool, NoError>(value: false) }
 
 		return Action(enabledIf: enabledProperty) { (input: AnyObject?) -> SignalProducer<AnyObject?, NSError> in
-			let executionSignal = RACSignal.defer {
+			let executionSignal = RACSignal.`defer` {
 				return self.execute(input)
 			}
 
-			return executionSignal.toSignalProducer(file: file, line: line)
+			return executionSignal.toSignalProducer(file, line: line)
 		}
 	}
 }
 
 extension Action {
 	private var commandEnabled: RACSignal {
-		let enabled = self.enabled.producer |> map { $0 as NSNumber }
+		let enabled = self.enabled.producer.map { $0 as NSNumber }
 		return toRACSignal(enabled)
 	}
 }

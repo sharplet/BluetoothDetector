@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import ReactiveCocoa
 
 enum TestError: Int {
 	case Default = 0
@@ -16,9 +15,4 @@ enum TestError: Int {
 }
 
 extension TestError: ErrorType {
-	static var domain: String { return "org.reactivecocoa.ReactiveCocoa.Tests" }
-
-	var nsError: NSError {
-		return NSError(domain: TestError.domain, code: rawValue, userInfo: nil)
-	}
 }

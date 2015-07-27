@@ -3,7 +3,7 @@ import Foundation
 /// Encapsulates the failure message that matchers can report to the end user.
 ///
 /// This is shared state between Nimble and matchers that mutate this value.
-@objc public class FailureMessage {
+public class FailureMessage: NSObject {
     public var expected: String = "expected"
     public var actualValue: String? = "" // empty string -> use default; nil -> exclude
     public var to: String = "to"
@@ -25,7 +25,7 @@ import Foundation
 
     internal var _stringValueOverride: String?
 
-    public init() {
+    public override init() {
     }
 
     public init(stringValue: String) {
@@ -33,7 +33,7 @@ import Foundation
     }
 
     internal func stripNewlines(str: String) -> String {
-        var lines: [String] = (str as NSString).componentsSeparatedByString("\n") as! [String]
+        var lines: [String] = (str as NSString).componentsSeparatedByString("\n") as [String]
         let whitespace = NSCharacterSet.whitespaceAndNewlineCharacterSet()
         lines = lines.map { line in line.stringByTrimmingCharactersInSet(whitespace) }
         return "".join(lines)
